@@ -37,6 +37,8 @@
   }
 }
 
+
+
 body {
   background-color: #03a9f4;
   margin: 0;
@@ -52,13 +54,28 @@ nav .brand-logo {
   font-size:xx-large;
 }
 
-
-.input-field {
+.inputContainer{
+  
   padding: 0.1%;
+  margin-top: 5%;
+  margin-right: 15%;
   margin-left: 0.5%;
-  width: 33%;
 }
 
+.input-field {
+  min-height: 25px;
+  width: 85%;
+}
+
+.selectPais {
+  margin-top: 1%;
+  margin-right: 15%;
+}
+
+.argenchina{
+  width: 85%;
+  min-height: 25px;
+}
 
 .contenedor-form {
   padding: 3rem 0 1px 0;
@@ -82,6 +99,29 @@ nav .brand-logo {
   font-size: 1.6rem;
   text-align: center;
 }
+
+.container{
+  display: flex;
+}
+
+.SecCunt{
+  width: 50%;
+}
+
+.card-panel{
+  width: 60%;
+  height: 90%;
+  color: black;
+  -webkit-transition: -webkit-box-shadow .25s;
+    transition: -webkit-box-shadow .25s;
+    transition: box-shadow .25s;
+    transition: box-shadow .25s, -webkit-box-shadow .25s;
+    padding: 24px;
+    margin: 0.5rem 0 1rem 0;
+    border-radius: 2px;
+    background-color: #fff;
+}
+
 .card-panel p {
   text-align: center;
   font-size: 1.4rem;
@@ -108,3 +148,22 @@ nav .brand-logo {
   background-color: #1689be;
   padding: 0.3%;
 }
+
+.labelGay{
+  padding:2px;
+}
+
+.botonazoCunt{
+  margin-top: 5%;
+  margin-right: 15%;
+  height: 50px;
+}
+
+.botonazo{
+  font-size: large;
+  width: 45%;
+  height: 100%;
+  background-color: gold;
+  border-radius: 15px;
+}
+
