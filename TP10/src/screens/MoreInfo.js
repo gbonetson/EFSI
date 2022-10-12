@@ -3,7 +3,7 @@ import 'aos/dist/aos.css';
 import { useEffect } from 'react';
 import logo_generic from '../components/img/logo_generic.png';
 import Ricky from '../components/img/Ricky.gif'
-import ricky2 from '../components/img/ricky2.jpeg'
+import ricky2 from '../components/img/ricky2.png'
 
 
 export default function MoreInfo(){
@@ -33,7 +33,7 @@ export default function MoreInfo(){
 
                 <div className='row align-items-center' data-aos="fade-up" data-aos-anchor-placement="center-bottom">
                     <div className='col' style={{paddingRop:'0'}}>
-                        <img className='img-fluid' src={Ricky} height="500" alt="El Comandante"/>
+                        <img className='img-fluid' src={Ricky} height="900" alt="El Comandante"/>
                     </div>
                     <div className='col'>
                         <h2 >Campana Sanitarios fue fundada en 2004 por Ricardo "el comandante" Fort (R.I.P.) despues
@@ -56,13 +56,13 @@ export default function MoreInfo(){
                         cagar por lo abierto que te queda el ano, así podes admirar tus hermosos muebles por toda la eternidad.</h2>
                     </div>
                     <div className='col' style={{paddingRop:'0'}}>
-                        <img className='img-fluid' src={Ricky} height="500" alt="El Comandante"/>
+                        <img className='img-fluid' src={ricky2} height="500" alt="El Comandante"/>
                     </div>
                 </div>
 
             </div>
 
-            <div style={{paddingTop:'50%'}}></div>
+            <div style={{paddingTop:'20%'}}></div>
         </>
     )
 }
