@@ -1,4 +1,5 @@
 import render_generic from './img/render_generic.png';
+import baño2 from './img/baño2.png'
 
 export default function Exposition() {
   return (
@@ -17,7 +18,7 @@ export default function Exposition() {
                 </div>
             </div>
             <div className="carousel-item">
-                <img src={render_generic} className="d-block w-100" alt="..."/>
+                <img src={baño2} className="d-block mx-auto"  alt="..."/>
                 <div className="carousel-caption d-none d-md-block">
                     <h5>Elija Sanitarios Campana para su hogar</h5>
                     <p>Lo que usted necesita</p>
