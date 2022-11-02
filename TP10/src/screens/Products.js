@@ -1,24 +1,31 @@
-import {React, useState,useRef} from 'react'
+import {React, useState} from 'react'
+import useSound from 'use-sound'
 import Productos from '../components/ListaProductos'
-
+import OOAA from '../components/img/Moai.mp3'
+import gioGio from '../components/img/gioGio.mp3'
 
 export default function Products(){
-
-    const ref = useRef(null);
-
     const [ListadoP, setListadoP] = useState(Productos);
 
-    function PlaySound(e) {
-       console.log(e.target)
-       console.log("a")
-        // thissound.play();
-    }
-    
-    function StopSound(soundobj) {
-        // var thissound=document.getElementById(soundobj);
-        // // thissound.pause();
-        // thissound.currentTime = 0;
-    }
+    const [playOn] = useSound(
+        OOAA,
+        { volume: 0.5 }
+      );
+
+    const [playOff] = useSound(
+        OOAA,
+        { volume: 0.25 }
+      );
+
+    const [playOn2] = useSound(
+        gioGio,
+        { volume: 0.5 }
+      );
+
+    const [playOff2] = useSound(
+        gioGio,
+        { volume: 0.25 }
+      );
 
 
     return(
@@ -32,7 +39,7 @@ export default function Products(){
                          return(
                             <div className="col-4">
                                 <div className="card" style={{margin:'10px'}}>
-                                    <div className="card-body" onMouseOver={PlaySound} onMouseOut={StopSound}>
+                                    <div className="card-body" onMouseOver={playOn} onMouseOut={playOff}>
                                         <img style={{height: "300px",width: "300px"}} src={producto.imagen} className="card-img-top" alt="Producto"/>
                                         <h3 className="card-title">{producto.nombre}</h3>
                                         <h5 className="card-text">{producto.desc}</h5>
@@ -43,6 +50,20 @@ export default function Products(){
                          )               
                         }
                         else{
+                            if(producto.nombre==="Giorno Giovanna limited edition toilet"){
+                                return(
+                                   <div className="col-4">
+                                       <div className="card" style={{margin:'10px'}}>
+                                           <div className="card-body" onMouseOver={playOn2} onMouseOut={playOff2}>
+                                               <img style={{height: "300px",width: "300px"}} src={producto.imagen} className="card-img-top" alt="Producto"/>
+                                               <h3 className="card-title">{producto.nombre}</h3>
+                                               <h5 className="card-text">{producto.desc}</h5>
+                                               <h3 className="card-title">{  "$" + producto.precio}</h3>
+                                           </div>
+                                       </div>
+                                   </div>
+                                )               
+                            }
                             return(
                                 <div className="col-4">
                                     <div className="card" style={{margin:'10px'}}>
@@ -60,7 +81,6 @@ export default function Products(){
                 }
                 </div>
                 <div style={{paddingTop:'10%'}}></div>
-                <audio ref={ref} id='mySound' src="https://www.youtube.com/watch?v=2tRIjRVcHcQ"/>
         </>
     )}
 
