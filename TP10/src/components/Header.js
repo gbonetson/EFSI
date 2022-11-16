@@ -1,5 +1,7 @@
 import logo_generic from './img/logo_generic.png';
 import { Link } from 'react-router-dom';
+import { FaCartPlus } from 'react-icons/fa';
+
 
 export default function Header() {
   return (
@@ -22,6 +24,9 @@ export default function Header() {
                     </li>
                     <li className="nav-item">
                         <Link className="nav-link" to={"/Contact"}>Contacto</Link>
+                    </li>
+                    <li className="nav-item">
+                        <Link className="nav-link" to={"/Cart"}><FaCartPlus/></Link>
                     </li>
                 </ul>
             </div>

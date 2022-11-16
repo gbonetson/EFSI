@@ -1,11 +1,15 @@
 import {React, useState} from 'react'
 import useSound from 'use-sound'
+import { useContext, useEffect } from "react";
+import CartContext from "../components/CartContext";
 import Productos from '../components/ListaProductos'
 import OOAA from '../components/img/Moai.mp3'
 import gioGio from '../components/img/gioGio.mp3'
 
 export default function Products(){
     const [ListadoP, setListadoP] = useState(Productos);
+    const [cart , setCart] = useContext(CartContext);
+
 
     const [playOn] = useSound(
         OOAA,
@@ -44,6 +48,7 @@ export default function Products(){
                                         <h3 className="card-title">{producto.nombre}</h3>
                                         <h5 className="card-text">{producto.desc}</h5>
                                         <h3 className="card-title">{  "$" + producto.precio}</h3>
+                                        <button className="btn btn-outline-success" onClick={()=>{setCart([...cart, ListadoP[index]])}}>Agregar al Carrito</button>
                                     </div>
                                 </div>
                             </div>
@@ -59,6 +64,7 @@ export default function Products(){
                                                <h3 className="card-title">{producto.nombre}</h3>
                                                <h5 className="card-text">{producto.desc}</h5>
                                                <h3 className="card-title">{  "$" + producto.precio}</h3>
+                                               <button className="btn btn-outline-success" onClick={()=>{setCart([...cart, ListadoP[index]])}}>Agregar al Carrito</button>
                                            </div>
                                        </div>
                                    </div>
@@ -72,6 +78,7 @@ export default function Products(){
                                             <h3 className="card-title">{producto.nombre}</h3>
                                             <h5 className="card-text">{producto.desc}</h5>
                                             <h3 className="card-title">{  "$" + producto.precio}</h3>
+                                            <button className="btn btn-outline-success" onClick={()=>{setCart([...cart, ListadoP[index]])}}>Agregar al Carrito</button>
                                         </div>
                                     </div>
                                 </div>
